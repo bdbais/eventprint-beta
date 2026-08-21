@@ -1,0 +1,51 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EventPrint — scheda del tecnico</title><style>
+body{margin:0;background:#F4F6F8;font-family:Segoe UI,Helvetica,Arial,sans-serif;
+color:#14181C;line-height:1.55}
+.testa{background:#1B2430;border-top:4px solid #D8411A;padding:26px 28px 22px}
+.testa .nome{font-family:Segoe UI Light,Segoe UI,Helvetica,Arial,sans-serif;
+font-size:32px;font-weight:300;color:#fff;line-height:1.1}
+.testa .studio{font-size:13px;font-weight:600;letter-spacing:5px;color:#D8411A;margin-top:4px}
+.testa .tag{font-size:12px;color:#8B97A4;margin-top:10px}
+main{max-width:720px;margin:0 auto;background:#fff;padding:28px 32px 40px}
+h1{font-size:22px;margin:0 0 6px}
+h2{font-size:16px;margin:26px 0 8px;color:#D8411A}
+em.sotto{color:#69747E}
+ol li,ul li{margin-bottom:8px}
+code{font-family:Consolas,monospace;background:#FFF4DE;border:1px solid #E8C87C;
+border-radius:4px;padding:1px 6px}
+table{border-collapse:collapse;width:100%;margin:8px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #E4E8EC;vertical-align:top;font-size:14px}
+th{color:#69747E;font-weight:600;font-size:12px}
+a{color:#D8411A}
+</style></head><body><div class="testa"><div class="nome">EventPrint</div><div class="studio">S T U D I O</div><div class="tag">Le foto dell'evento, dal negozio al cliente</div></div><main><h1>EventPrint — scheda del tecnico</h1>
+<p><em class="sotto">Una pagina, da tenere nella chiavetta accanto all'eseguibile.</em></p>
+<h2>Nella chiavetta</h2>
+<ul>
+<li><code>EventPrint-Studio.exe</code></li>
+<li>la licenza <code>.eventprint</code> del negozio (chiederla PRIMA della visita: serve nome del negozio ed <b>email Google</b> con cui lavorerà)</li>
+<li>questa scheda</li>
+</ul>
+<h2>Sul posto, in quest'ordine</h2>
+<ol>
+<li><b>Con l'account Google del negozio</b>, aprire <code>script.google.com/home/usersettings</code> e <b>accendere l'API di Apps Script</b>. Google non lascia farlo a nessun programma: dimenticarlo fa fallire il passo 5 a metà.</li>
+<li>Copiare l'exe sul PC del negozio e avviarlo.</li>
+<li>Alla richiesta, <b>importare la licenza</b> dalla chiavetta.</li>
+<li><b>Collega Google</b>: si apre il browser. Se sul PC vivono più account Google, usare una <b>finestra in incognito</b> ed entrare con l'account del negozio.</li>
+<li><b>Impostazioni ▸ Prepara questo account…</b> — crea da solo foglio, script e pagina dei clienti. Poi impostare le due cartelle: dove stanno le foto (disco o NAS) e dove finiranno le stampe.</li>
+<li>Il gesto che spetta <b>al negoziante, con le sue mani</b>: aprire il foglio Google e <b>dare il consenso</b> allo script. Google non permette a terzi di accettare al posto suo.</li>
+<li><b>Eventi ▸ Prova il giro…</b> su un evento di prova: ogni passo dice verde o rosso, e accanto al rosso c'è il pulsante che ripara.</li>
+<li>Prima di andarsene: pagina cliente aperta <b>dal telefono del negoziante</b> (non dal PC), un ordine di prova fatto e PROCESSATO, la locandina stampata.</li>
+</ol>
+<h2>Le tre trappole note</h2>
+<table>
+<tr><th>Sintomo</th><th>Causa</th><th>Rimedio</th></tr>
+<tr><td><i>Prepara</i> fallisce subito</td><td>API di Apps Script spenta (passo 1)</td><td>usersettings → accendi → riprova</td></tr>
+<tr><td><code>PERMISSION_DENIED</code> al collegamento</td><td>browser con più account: ha preso quello sbagliato</td><td>finestra in incognito, account del negozio</td></tr>
+<tr><td>Il link clienti non si apre</td><td>manca il consenso allo script (passo 6)</td><td>il negoziante apre il foglio e autorizza</td></tr>
+</table>
+<h2>Se qualcosa non torna</h2>
+<ul>
+<li><i>Prova il giro</i> dice <b>cosa</b> manca e porta <b>dove</b> si sistema.</li>
+<li>Il <code>?</code> in alto a destra di ogni finestra apre il manuale al punto giusto.</li>
+<li>Caso disperato: <b>Impostazioni ▸ Assistenza ▸ Prepara pacchetto assistenza…</b> → allegare il file <code>.epa</code> alla mail con cui ci raccontate il problema. È cifrato, dentro non ci sono segreti del negozio.</li>
+</ul></main></body></html>
