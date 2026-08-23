@@ -9,6 +9,7 @@ font-size:32px;font-weight:300;color:#fff;line-height:1.1}
 main{max-width:720px;margin:0 auto;background:#fff;padding:28px 32px 40px}
 h1{font-size:22px;margin:0 0 6px}
 h2{font-size:16px;margin:26px 0 8px;color:#D8411A}
+h3{font-size:14px;margin:20px 0 6px;color:#14181C}
 em.sotto{color:#69747E}
 ol li,ul li{margin-bottom:8px}
 code{font-family:Consolas,monospace;background:#FFF4DE;border:1px solid #E8C87C;
@@ -33,19 +34,87 @@ a{color:#D8411A}
 <li><b>Collega Google</b>: si apre il browser. Se sul PC vivono più account Google, usare una <b>finestra in incognito</b> ed entrare con l'account del negozio.</li>
 <li><b>Impostazioni ▸ Prepara questo account…</b> — crea da solo foglio, script e pagina dei clienti. Poi impostare le due cartelle: dove stanno le foto (disco o NAS) e dove finiranno le stampe.</li>
 <li>Il gesto che spetta <b>al negoziante, con le sue mani</b>: aprire il foglio Google e <b>dare il consenso</b> allo script. Google non permette a terzi di accettare al posto suo.</li>
-<li><b>Eventi ▸ Prova il giro…</b> su un evento di prova: ogni passo dice verde o rosso, e accanto al rosso c'è il pulsante che ripara.</li>
+<li><b>Eventi ▸ Fai un test…</b> su un evento di prova: ogni passo dice verde o rosso, e accanto al rosso c'è il pulsante che ripara.</li>
 <li>Prima di andarsene: pagina cliente aperta <b>dal telefono del negoziante</b> (non dal PC), un ordine di prova fatto e PROCESSATO, la locandina stampata.</li>
 </ol>
-<h2>Le tre trappole note</h2>
+<h2>Problemi bloccanti — schermata per schermata</h2>
+<p>In ordine di quando li puoi incontrare. Ognuno dice <b>cosa vedi</b>, <b>perché</b>, e i <b>passi</b> per uscirne.</p>
+<h3>1 · « Windows ha protetto il PC » (SmartScreen)</h3>
+<ul>
+<li><b>Cosa vedi:</b> finestra blu <i>Windows ha protetto il PC</i>, col solo pulsante <i>Non eseguire</i>.</li>
+<li><b>Perché:</b> l'exe non ha una firma a pagamento; normale per un programma nuovo.</li>
+<li><b>Passi:</b> <i>Ulteriori informazioni</i> → <i>Esegui comunque</i>.</li>
+</ul>
+<h3>2 · « EventPrint (Non verificato) » — consenso di Google</h3>
+<ul>
+<li><b>Cosa vedi:</b> <i>Google Apps Script — EventPrint (Non verificato)</i>, con i pulsanti <i>CANCELLARE</i> e <i>REVISIONE DELLE AUTORIZZAZIONI</i>.</li>
+<li><b>Perché:</b> il progetto Google non ha (ancora) passato la verifica di Google. <b>Non è un errore.</b> La vede <b>solo</b> chi configura, <b>una volta</b>; i clienti non la vedono mai.</li>
+<li><b>Passi:</b> <i>REVISIONE DELLE AUTORIZZAZIONI</i> → scegli l'account <b>del negozio</b> → alla schermata <i>Google non ha verificato questa app</i> premi <b>Avanzate</b> in basso → <b>Vai a EventPrint (non sicuro)</b> → lascia spuntati <b>tutti</b> i permessi → <b>Consenti</b>.</li>
+</ul>
+<h3>3 · Permessi dati a metà</h3>
+<ul>
+<li><b>Cosa vedi:</b> la schermata coi permessi (Fogli, Drive…) e alcune caselle restano vuote; poi Studio avvisa che « mancano dei permessi ».</li>
+<li><b>Perché:</b> Google fa scegliere caso per caso; se ne salti uno Studio non può lavorare, e annulla il mezzo-consenso invece di far finta di niente.</li>
+<li><b>Passi:</b> <i>Impostazioni ▸ Collegamento a Google ▸ Ricollega</i> e, nella schermata dei permessi, <b>spunta tutto</b> (o <i>Seleziona tutto</i>) → <i>Continua</i>.</li>
+</ul>
+<h3>4 · Più account Google sullo stesso browser</h3>
+<ul>
+<li><b>Cosa vedi:</b> al test della pagina cliente esce una <b>richiesta di accesso a Drive</b>, oppure l'indirizzo contiene un « /u/1/ », oppure <i>PERMISSION_DENIED</i>.</li>
+<li><b>Perché:</b> il browser è connesso a più account e Google confonde chi chiede cosa.</li>
+<li><b>Passi:</b> apri il test in una finestra <b>in incognito</b> col solo account del negozio; <b>oppure</b>, più semplice, in Studio usa <i>Pagina cliente ▸ Controlla che risponda</i>, che non passa dal browser.</li>
+</ul>
+<h3>5 · « Prepara » fallisce subito — API di Apps Script spenta</h3>
+<ul>
+<li><b>Cosa vedi:</b> <i>Prepara questo account…</i> si ferma con un errore appena parte.</li>
+<li><b>Perché:</b> l'API di Apps Script è spenta sull'account; nessun programma può accenderla al posto tuo.</li>
+<li><b>Passi:</b> con l'account del negozio apri <code><a href="https://script.google.com/home/usersettings">script.google.com/home/usersettings</a></code>, accendi <b>Google Apps Script API</b>, torna in Studio e ripeti <i>Prepara</i>.</li>
+</ul>
+<h3>6 · Il foglio è nel cestino</h3>
+<ul>
+<li><b>Cosa vedi:</b> dopo <i>Avanti</i>, un messaggio dice che il foglio del negozio è nel cestino di Drive.</li>
+<li><b>Perché:</b> il foglio è stato cancellato (a mano, o da un vecchio giro andato male).</li>
+<li><b>Passi:</b> accetta quando Studio propone di <b>ripristinarlo</b>; oppure Drive ▸ <i>Cestino</i> ▸ ripristina <i>EventPrint — gestione stampe — &lt;negozio&gt;</i>, poi in Studio <i>Trova il foglio del negozio</i>.</li>
+</ul>
+<h3>7 · Indirizzo /exec vuoto o link all'editor</h3>
+<ul>
+<li><b>Cosa vedi:</b> il campo <i>Indirizzo /exec</i> è vuoto, oppure hai incollato un link che finisce in <code>/edit</code> (l'editor) e il test dà accesso negato.</li>
+<li><b>Perché:</b> serve l'indirizzo <b>pubblicato</b> della pagina, non quello dell'editor.</li>
+<li><b>Passi:</b> incolla l'indirizzo che finisce in <b>/exec</b> (formato <code><a href="https://script.google.com/macros/s/…/exec">script.google.com/macros/s/…/exec</a></code>). Studio toglie da solo il « /u/1/ » e rifiuta i link all'editor. Se non lo trovi, <i>Pagina cliente ▸ Ripara…</i>: lo rigenera.</li>
+</ul>
+<h3>8 · « Pagina non pubblicata » (rosso al test)</h3>
+<ul>
+<li><b>Cosa vedi:</b> <i>Fai un test</i> segna rosso alla riga <i>Pagina cliente</i>.</li>
+<li><b>Perché:</b> appena dopo la pubblicazione Google ci mette fino a un minuto a rispondere.</li>
+<li><b>Passi:</b> aspetta un minuto e ripeti <i>Fai un test</i>. Se resta rosso, <i>Pagina cliente ▸ Ripara…</i>: ripubblica, rifà i link degli eventi e toglie le pagine vecchie.</li>
+</ul>
+<h3>9 · Il link clienti non si apre — manca il consenso allo script</h3>
+<ul>
+<li><b>Cosa vedi:</b> aprendo il link, la galleria non compare.</li>
+<li><b>Perché:</b> lo script gira <b>come il negoziante</b>, che non ha ancora dato il consenso.</li>
+<li><b>Passi:</b> <b>il negoziante, con le sue mani</b>, apre il foglio Google e autorizza lo script quando richiesto. Nessun altro può farlo al posto suo.</li>
+</ul>
+<h3>10 · « Location is not available » aprendo la cartella stampe</h3>
+<ul>
+<li><b>Cosa vedi:</b> Windows dice che il percorso non è disponibile.</li>
+<li><b>Perché:</b> la cartella impostata non esiste (ancora), o il NAS non è montato.</li>
+<li><b>Passi:</b> <i>Negozio ▸ Cartelle</i> → ricontrolla il percorso delle stampe; se è in rete, monta l'unità o scrivi <code>\\NAS\cartella</code>.</li>
+</ul>
+<h2>Riferimento rapido</h2>
 <table>
 <tr><th>Sintomo</th><th>Causa</th><th>Rimedio</th></tr>
-<tr><td><i>Prepara</i> fallisce subito</td><td>API di Apps Script spenta (passo 1)</td><td>usersettings → accendi → riprova</td></tr>
-<tr><td><code>PERMISSION_DENIED</code> al collegamento</td><td>browser con più account: ha preso quello sbagliato</td><td>finestra in incognito, account del negozio</td></tr>
-<tr><td>Il link clienti non si apre</td><td>manca il consenso allo script (passo 6)</td><td>il negoziante apre il foglio e autorizza</td></tr>
+<tr><td>SmartScreen blocca l'avvio</td><td>exe non firmato</td><td>Ulteriori informazioni → Esegui comunque</td></tr>
+<tr><td>« Non verificato » di Google</td><td>app non ancora verificata (normale)</td><td>Revisione → Avanzate → Vai a EventPrint → Consenti</td></tr>
+<tr><td>« mancano dei permessi »</td><td>consenso dato a metà</td><td>Ricollega e spunta <b>tutto</b></td></tr>
+<tr><td>accesso a Drive / « /u/1/ » / PERMISSION_DENIED</td><td>browser multi-account</td><td>incognito, o <i>Controlla che risponda</i></td></tr>
+<tr><td><i>Prepara</i> fallisce subito</td><td>API Apps Script spenta</td><td>usersettings → accendi → riprova</td></tr>
+<tr><td>foglio nel cestino</td><td>foglio cancellato</td><td>ripristina dal cestino, poi <i>Trova il foglio</i></td></tr>
+<tr><td>/exec vuoto o link all'editor</td><td>indirizzo sbagliato</td><td>incolla il link che finisce in /exec, o <i>Ripara</i></td></tr>
+<tr><td>« Pagina non pubblicata »</td><td>ritardo di Google</td><td>aspetta un minuto, poi <i>Ripara</i></td></tr>
+<tr><td>link clienti non si apre</td><td>manca il consenso del negoziante</td><td>il negoziante apre il foglio e autorizza</td></tr>
 </table>
-<h2>Se qualcosa non torna</h2>
+<h2>Se resta bloccato</h2>
 <ul>
-<li><i>Prova il giro</i> dice <b>cosa</b> manca e porta <b>dove</b> si sistema.</li>
+<li><i>Eventi ▸ Fai un test…</i> dice <b>cosa</b> manca e porta <b>dove</b> si sistema.</li>
 <li>Il <code>?</code> in alto a destra di ogni finestra apre il manuale al punto giusto.</li>
-<li>Caso disperato: <b>Impostazioni ▸ Assistenza ▸ Prepara pacchetto assistenza…</b> → allegare il file <code>.epa</code> alla mail con cui ci raccontate il problema. È cifrato, dentro non ci sono segreti del negozio.</li>
+<li>Caso disperato: <b>Impostazioni ▸ Assistenza</b> → premi <b>Copia</b> e incollaci il testo per mail o WhatsApp. È cifrato: dentro non ci sono segreti del negozio, solo cosa è andato storto.</li>
 </ul></main></body></html>
