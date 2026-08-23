@@ -1,7 +1,7 @@
 {
-  "versione": "1.2.0",
-  "data": "2026-08-18",
-  "note": "Il back-office diventa EventPrint Studio, un programma sul computer del negozio: le foto originali restano sul disco o sul NAS e in rete salgono solo le anteprime. Il foglio Google torna a essere un archivio. Installer assorbito in Studio. Conferma facoltativa degli ordini con avviso al cliente, notifiche di Windows, temi per Studio e per la pagina cliente, aiuto contestuale col manuale.",
+  "versione": "1.3.0",
+  "data": "2026-08-23",
+  "note": "Configurazione guidata passo passo; installazione nel menu Start con disinstalla; avviso di nuova versione; pubblicazione della pagina piu' robusta (ricava e verifica l'indirizzo); consenso Google a meta' respinto subito; foglio a meta' completato invece di duplicato; « Fai un test »; campo ambiente e « spedita » nelle licenze.",
   "file": [
     "appsscript.json",
     "00_Config.gs",
