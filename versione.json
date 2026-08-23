@@ -1,7 +1,7 @@
 {
-  "versione": "1.3.0",
+  "versione": "1.3.1",
   "data": "2026-08-23",
-  "note": "Configurazione guidata passo passo; installazione nel menu Start con disinstalla; avviso di nuova versione; pubblicazione della pagina piu' robusta (ricava e verifica l'indirizzo); consenso Google a meta' respinto subito; foglio a meta' completato invece di duplicato; « Fai un test »; campo ambiente e « spedita » nelle licenze.",
+  "note": "Gestione listini (ogni listino i suoi prezzi, scelto o creato pubblicando l'evento); Pagina cliente come voce di barra sotto Eventi; interruttore per la scelta dei suoni negli eventi; Studio ripristina da solo il foglio finito nel cestino; messaggi piu' chiari quando la pagina e' pubblicata solo per alcuni account.",
   "file": [
     "appsscript.json",
     "00_Config.gs",
