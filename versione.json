@@ -1,7 +1,7 @@
 {
-  "versione": "1.4.0",
+  "versione": "1.4.1",
   "data": "2026-08-24",
-  "note": "Sezione Clienti: raccolti dagli ordini e a mano, con consenso agli avvisi (email/WhatsApp). La pagina cliente ricorda i dati nel browser (il prossimo evento e' gia' compilato) e chiede il consenso agli avvisi — due opzioni separate, disattivabili dal negozio. Termini aggiornati sul consenso. Idee: bot Telegram, pubblicazione Facebook/Instagram.",
+  "note": "Barra: le sezioni si trascinano con riordino animato dal vivo. La pagina dei clienti sempre con l'indirizzo /exec pulito (via il « /u/1/ » dei browser multi-account, mai il link all'editor). Le distribuzioni vecchie si tolgono da sole all'avvio, in modo trasparente (e in Ripara).",
   "file": [
     "appsscript.json",
     "00_Config.gs",
