@@ -1,7 +1,7 @@
 {
-  "versione": "1.4.1",
+  "versione": "1.4.2",
   "data": "2026-08-24",
-  "note": "Barra: le sezioni si trascinano con riordino animato dal vivo. La pagina dei clienti sempre con l'indirizzo /exec pulito (via il « /u/1/ » dei browser multi-account, mai il link all'editor). Le distribuzioni vecchie si tolgono da sole all'avvio, in modo trasparente (e in Ripara).",
+  "note": "Le impostazioni sono divise in due voci più leggere: « Negozio » (nome, contatti, orari, logo, listini e i messaggi con cui si annunciano gli eventi) e « Impostazioni » (collegamento a Google, cartelle, aspetto, barra laterale, licenza). Nuovo editor dei messaggi per email e WhatsApp con segnaposto — [TITOLO], [LINK], [CLIENTE]… — e anteprima dal vivo di come arriveranno al cliente.",
   "file": [
     "appsscript.json",
     "00_Config.gs",
