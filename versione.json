@@ -1,7 +1,7 @@
 {
-  "versione": "1.3.3",
-  "data": "2026-08-23",
-  "note": "Barra laterale: nelle impostazioni un checkbox « mostra » per sezione (con suggerimento), e le voci si riordinano trascinandole su e giu nel menu. Tolto lo sfondo grigio dai riquadri di spunta.",
+  "versione": "1.4.0",
+  "data": "2026-08-24",
+  "note": "Sezione Clienti: raccolti dagli ordini e a mano, con consenso agli avvisi (email/WhatsApp). La pagina cliente ricorda i dati nel browser (il prossimo evento e' gia' compilato) e chiede il consenso agli avvisi — due opzioni separate, disattivabili dal negozio. Termini aggiornati sul consenso. Idee: bot Telegram, pubblicazione Facebook/Instagram.",
   "file": [
     "appsscript.json",
     "00_Config.gs",
