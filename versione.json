@@ -1,7 +1,7 @@
 {
-  "versione": "1.3.1",
+  "versione": "1.3.2",
   "data": "2026-08-23",
-  "note": "Gestione listini (ogni listino i suoi prezzi, scelto o creato pubblicando l'evento); Pagina cliente come voce di barra sotto Eventi; interruttore per la scelta dei suoni negli eventi; Studio ripristina da solo il foglio finito nel cestino; messaggi piu' chiari quando la pagina e' pubblicata solo per alcuni account.",
+  "note": "Assistenza senza allegato: Copia il diario cifrato in base64 e mandalo per mail o WhatsApp (mail/numero configurabili); il generatore ha « Incolla assistenza ». Le voci della barra si riordinano a piacere.",
   "file": [
     "appsscript.json",
     "00_Config.gs",
