@@ -1,7 +1,7 @@
 {
-  "versione": "1.4.2",
+  "versione": "1.4.3",
   "data": "2026-08-24",
-  "note": "Le impostazioni sono divise in due voci più leggere: « Negozio » (nome, contatti, orari, logo, listini e i messaggi con cui si annunciano gli eventi) e « Impostazioni » (collegamento a Google, cartelle, aspetto, barra laterale, licenza). Nuovo editor dei messaggi per email e WhatsApp con segnaposto — [TITOLO], [LINK], [CLIENTE]… — e anteprima dal vivo di come arriveranno al cliente.",
+  "note": "Avvisa i clienti dei nuovi eventi: seleziona uno o più eventi e premi Invio (o « Avvisa i clienti »), scegli chi avvisare dalla rubrica e con che canale — email (parte dal negozio, con Reply-To no-reply) o WhatsApp. Nuovo segnaposto [LOCANDINA] nei messaggi: immagine nella mail, anteprima su WhatsApp. Statistiche con Clienti e Nuovi clienti. Campo « Email no-reply » nel Negozio. Predisposto il « link corto e anteprima » via Cloudflare Worker (spento, da configurare). Correzione dell'installazione che poteva fallire con « Permission denied » sovrascrivendo l'exe in uso.",
   "file": [
     "appsscript.json",
     "00_Config.gs",
